@@ -8,7 +8,7 @@
         "build": "tsc",
         "format": "prettier -c .",
         "lint": "eslint .",
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "jest"
     },
     "main": "index.js",
     "type": "commonjs",
@@ -20,10 +20,13 @@
         "@goauthentik/eslint-config": "^1.3.0",
         "@goauthentik/prettier-config": "^3.4.3",
         "@goauthentik/tsconfig": "^1.0.7",
+        "@types/jest": "^30.0.0",
         "@types/node": "^25.5.0",
         "eslint": "^9.39.4",
+        "jest": "^30.3.0",
         "prettier": "^3.8.1",
         "prettier-plugin-packagejson": "^3.0.2",
+        "ts-jest": "^29.4.6",
         "typescript": "^5.9.3",
         "typescript-eslint": "^8.57.1"
     },

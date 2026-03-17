@@ -1,12 +1,7 @@
+import { isTitleAllowed, parseAllowedPrefixes } from "./lib";
+
 import * as core from "@actions/core";
 import * as github from "@actions/github";
-
-function parseAllowedPrefixes(raw: string): string[] {
-    return raw
-        .split(/[\n,]+/)
-        .map((value) => value.trim())
-        .filter((value) => value.length > 0);
-}
 
 async function run(): Promise<void> {
     try {
@@ -28,7 +23,7 @@ async function run(): Promise<void> {
             return;
         }
 
-        const matches = allowedPrefixes.some((prefix) => title.startsWith(prefix));
+        const matches = isTitleAllowed(title, allowedPrefixes);
 
         if (!matches) {
             core.setFailed(
