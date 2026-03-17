@@ -7,6 +7,7 @@ async function run(): Promise<void> {
     try {
         const rawPrefixes = core.getInput("allowed-prefixes", { required: true });
         const allowedPrefixes = parseAllowedPrefixes(rawPrefixes);
+        const githubToken = core.getInput("github-token");
 
         if (allowedPrefixes.length === 0) {
             core.setFailed("Input 'allowed-prefixes' must contain at least one prefix.");
@@ -14,7 +15,27 @@ async function run(): Promise<void> {
         }
 
         const pr = github.context.payload.pull_request;
-        const title = pr?.title;
+        let title = pr?.title;
+
+        if (!title && githubToken) {
+            const octokit = github.getOctokit(githubToken);
+            const pullNumber = pr?.number ?? github.context.issue.number;
+
+            if (!pullNumber) {
+                core.setFailed(
+                    "No pull request number found. This action must run on pull_request events.",
+                );
+                return;
+            }
+
+            const { owner, repo } = github.context.repo;
+            const response = await octokit.rest.pulls.get({
+                owner,
+                repo,
+                pull_number: pullNumber,
+            });
+            title = response.data.title;
+        }
 
         if (!title) {
             core.setFailed(
