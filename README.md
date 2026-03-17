@@ -7,11 +7,11 @@ allowed prefixes.
 
 - `allowed-prefixes` (required): Comma or newline separated list of allowed
   title prefixes. Example: `feat,fix,chore` or:
-  ```
-  feat:
-  fix:
-  chore:
-  ```
+    ```
+    feat:
+    fix:
+    chore:
+    ```
 - `github-token` (optional): GitHub token used to fetch PR data via the API if
   needed. Defaults to `${{ github.token }}`.
 
