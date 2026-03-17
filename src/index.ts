@@ -1,4 +1,4 @@
-import { isTitleAllowed, parseAllowedPrefixes } from "./lib";
+import { isTitleAllowed, parseAllowedPrefixes } from "./lib.js";
 
 import * as core from "@actions/core";
 import * as github from "@actions/github";
