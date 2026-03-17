@@ -1,4 +1,5 @@
-import { isTitleAllowed, parseAllowedPrefixes } from "../lib";
+import { describe, expect, it } from "vitest";
+import { isTitleAllowed, parseAllowedPrefixes } from "../lib.js";
 
 describe("parseAllowedPrefixes", () => {
     it("splits comma-separated values", () => {
