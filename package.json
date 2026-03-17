@@ -2,16 +2,17 @@
     "name": "action-pr-lint",
     "version": "1.0.0",
     "description": "",
-    "license": "ISC",
+    "keywords": [],
+    "license": "MIT",
     "author": "",
+    "type": "module",
     "scripts": {
         "build": "tsc",
         "format": "prettier -c .",
+        "format-fix": "prettier --write .",
         "lint": "eslint .",
         "test": "jest"
     },
-    "main": "index.js",
-    "type": "commonjs",
     "dependencies": {
         "@actions/core": "^3.0.0",
         "@actions/github": "^9.0.0"
@@ -29,6 +30,5 @@
         "ts-jest": "^29.4.6",
         "typescript": "^5.9.3",
         "typescript-eslint": "^8.57.1"
-    },
-    "keywords": []
+    }
 }

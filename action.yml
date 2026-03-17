@@ -1,9 +1,9 @@
 name: PR Title Prefix Validator
 description: Validate that pull request titles start with an allowed prefix.
 inputs:
-    allowed-prefixes:
-        description: Comma or newline separated list of allowed title prefixes.
-        required: true
+  allowed-prefixes:
+    description: Comma or newline separated list of allowed title prefixes.
+    required: true
 runs:
-    using: docker
-    image: Dockerfile
+  using: docker
+  image: docker://ghcr.io/beryju/action-pr-lint:latest
