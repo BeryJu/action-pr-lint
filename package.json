@@ -19,7 +19,7 @@
     },
     "devDependencies": {
         "@goauthentik/eslint-config": "^1.3.0",
-        "@goauthentik/prettier-config": "^3.4.3",
+        "@goauthentik/prettier-config": "^3.5.0",
         "@goauthentik/tsconfig": "^1.0.7",
         "@types/node": "^25.5.0",
         "eslint": "^9.39.4",
