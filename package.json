@@ -21,7 +21,7 @@
         "@goauthentik/eslint-config": "^1.3.0",
         "@goauthentik/prettier-config": "^3.4.3",
         "@goauthentik/tsconfig": "^1.0.7",
-        "@types/node": "^25.5.0",
+        "@types/node": "^25.5.2",
         "eslint": "^9.39.4",
         "prettier": "^3.8.1",
         "prettier-plugin-packagejson": "^3.0.2",
