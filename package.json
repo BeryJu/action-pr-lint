@@ -22,7 +22,7 @@
         "@goauthentik/prettier-config": "^3.4.3",
         "@goauthentik/tsconfig": "^1.0.7",
         "@types/node": "^25.5.0",
-        "eslint": "^9.39.4",
+        "eslint": "^10.2.0",
         "prettier": "^3.8.1",
         "prettier-plugin-packagejson": "^3.0.2",
         "typescript": "^5.9.3",
