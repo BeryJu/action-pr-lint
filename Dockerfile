@@ -1,4 +1,4 @@
-FROM node:25-trixie-slim AS build
+FROM node:26-trixie-slim AS build
 WORKDIR /app
 
 COPY package.json package-lock.json ./
@@ -8,7 +8,7 @@ COPY tsconfig.json ./
 COPY src ./src
 RUN npm run build
 
-FROM node:25-trixie-slim
+FROM node:26-trixie-slim
 WORKDIR /app
 
 COPY package.json package-lock.json ./
